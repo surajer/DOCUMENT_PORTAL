@@ -45,3 +45,9 @@ git push
 git clone <repo_link>
 ...
 
+## Mimimum requirement for this project
+1. LLM Model ## groq(free api), openai, gemini(15 days free), claude, huggingface(free), ollama(local setup, need good local config)
+
+2. Embedding Model ## openai, huggingface, gemini
+
+3. Vector Database ## inmemory ##ondisk ##cloud based
