@@ -57,3 +57,21 @@ pip install -e .
 2. Embedding Model ## openai, huggingface, gemini
 
 3. Vector Database ## inmemory ##ondisk ##cloud based
+
+
+## requirements.txt
+-e . package is for setup.py for local environment bcz cant install the same way everytime
+
+## GROQ API KEY LINK
+...
+https://console.groq.com/keys
+
+https://console.groq.com/docs/overview
+...
+
+## GEMINI API KEY
+...
+https://aistudio.google.com/app/apikey
+
+https://ai.google.dev/gemini-api/docs
+...
