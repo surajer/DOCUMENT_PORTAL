@@ -45,6 +45,12 @@ git push
 git clone <repo_link>
 ...
 
+## To install document_portal as a package inside your virtual env using setup.py file
+...
+pip install -e .
+...
+
+
 ## Mimimum requirement for this project
 1. LLM Model ## groq(free api), openai, gemini(15 days free), claude, huggingface(free), ollama(local setup, need good local config)
 
