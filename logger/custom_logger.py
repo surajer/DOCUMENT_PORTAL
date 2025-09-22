@@ -2,7 +2,6 @@ import logging
 import os
 from datetime import datetime
 
-
 class CustomLogger:
     def __init__(self, log_dir="logs"):
         #Ensures logs directory exists
