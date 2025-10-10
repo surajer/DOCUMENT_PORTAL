@@ -11,12 +11,12 @@ retriver:
 llm:
   groq:
     provider: "groq"
-    model_name: "deepseek-r1-distill-llama-70b"
+    model_name: "llama-3.1-8b-instant"
     temperature: 0
     max_output_tokens: 2048
 
   google:
     provider: "google"
-    model_name: "your_model_name"
+    model_name: "AIzaSyAf3KHENEE13vprLMNMu0k5leW2lJIcDW8"
     temperature: 0
-    max_output_tokens: 2048
+    max_output_tokens: 200
