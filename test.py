@@ -1,10 +1,10 @@
 import os
 from pathlib import Path
-from src.document_analyzer.data_ingestion import PDFHandler       # Your PDFHandler class
+from src.document_analyzer.data_ingestion import DocumentHandler       # Your PDFHandler class
 from src.document_analyzer.data_analysis import DocumentAnalyzer  # Your DocumentAnalyzer class
 
 # Path to the PDF you want to test
-PDF_PATH = r"C:\\Complete_Content2\\llmops_batch\\document_portal\\data\\document_analysis\\NIPS-2017-attention-is-all-you-need-Paper.pdf"
+PDF_PATH = r"C:\\LLMOPS\\Project2\\DOCUMENT_PORTAL\\data\\document_analysis\\sample.pdf"
 
 # Dummy file wrapper to simulate uploaded file (Streamlit style)
 class DummyFile:
@@ -21,17 +21,20 @@ def main():
         print("Starting PDF ingestion...")
         dummy_pdf = DummyFile(PDF_PATH)
 
-        handler = PDFHandler(session_id="test_ingestion_analysis")
+        handler = DocumentHandler(session_id="test_ingestion_analysis")
+        
         saved_path = handler.save_pdf(dummy_pdf)
         print(f"PDF saved at: {saved_path}")
 
         text_content = handler.read_pdf(saved_path)
         print(f"Extracted text length: {len(text_content)} chars\n")
+        print(f"First 500 characters:\n{text_content[:500]}\n")
 
         # ---------- STEP 2: DATA ANALYSIS ----------
         print("Starting metadata analysis...")
         analyzer = DocumentAnalyzer()  # Loads LLM + parser
-        analysis_result = analyzer.analyze_metadata(text_content)
+        
+        analysis_result = analyzer.analyze_document(text_content)
 
         # ---------- STEP 3: DISPLAY RESULTS ----------
         print("\n=== METADATA ANALYSIS RESULT ===")

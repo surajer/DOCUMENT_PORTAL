@@ -34,7 +34,7 @@ class DocumentAnalyzer:
         
         
     
-    def analyze_document(self, document_text:str)-> dict:
+    def analyze_document(self, document_text:str):
         """
         Analyze a document's text and extract structured metadata & summary.
         """
@@ -54,4 +54,4 @@ class DocumentAnalyzer:
 
         except Exception as e:
             self.log.error("Metadata analysis failed", error=str(e))
-            raise DocumentPortalException("Metadata extraction failed") from e
+            raise DocumentPortalException("Metadata extraction failed",sys) from e

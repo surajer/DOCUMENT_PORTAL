@@ -69,7 +69,7 @@ if __name__ == "__main__":
     from pathlib import Path
     from io import BytesIO
     
-    pdf_path=r"C:\LLMOPS\Project2\DOCUMENT_PORTAL\data\document_analysis\sample.pdf"
+    pdf_path=r"C:\\Users\\sunny\\document_portal\\data\\document_analysis\\sample.pdf"
     class DummnyFile:
         def __init__(self,file_path):
             self.name = Path(file_path).name
@@ -91,3 +91,4 @@ if __name__ == "__main__":
         
     except Exception as e:
         print(f"Error: {e}")
+    
