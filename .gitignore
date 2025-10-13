@@ -6,5 +6,4 @@ venv/
 __pycache__/
 logs/
 *.pyc
-test.py
 data
