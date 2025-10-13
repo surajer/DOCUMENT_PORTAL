@@ -69,7 +69,7 @@ if __name__ == "__main__":
     from pathlib import Path
     from io import BytesIO
     
-    pdf_path=r"C:\LLMOPS\Project2\DOCUMENT_PORTAL\data\document_analysis\NIPS-2017-attention-is-all-you-need-Paper.pdf"
+    pdf_path=r"C:\LLMOPS\Project2\DOCUMENT_PORTAL\data\document_analysis\sample.pdf"
     class DummnyFile:
         def __init__(self,file_path):
             self.name = Path(file_path).name
